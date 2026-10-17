@@ -1,6 +1,6 @@
 {
   "name": "Albion Ledger",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "release_date": "2026-10-17",
   "status": "public",
   "classic_url": "classic.html",
@@ -14,12 +14,17 @@
     "route-ranking-and-matrix",
     "equipment-and-weapon-craft-calculator",
     "manual-return-rate-and-station-fee",
-    "classic-interface-switch"
+    "classic-interface-switch",
+    "purchase-enchant-craft-chain-comparison",
+    "separate-local-production-plan"
   ],
   "limitations": [
     "routes-max-20-items-one-unit-per-item",
     "craft-normal-quality-only",
-    "craft-not-merged-into-trading-basket",
-    "no-background-alerts-or-cloud-sync"
+    "no-background-alerts-or-cloud-sync",
+    "chain-operations-in-one-city",
+    "manual-return-and-station-fees",
+    "normal-quality-only",
+    "production-plans-kept-separate-from-trading-basket"
   ]
 }
