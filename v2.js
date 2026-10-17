@@ -10,7 +10,8 @@ for(const id of ['craftCity','craftSellCity'])$(id).innerHTML=[...cities,...(id=
 const labels={strategy:'✦ Обзор',market:'◈ Все сделки',holdings:'▤ Мои запасы',basket:'▣ Мой план',trip:'⚑ Учёт рейсов'};for(const b of document.querySelectorAll('nav button'))if(labels[b.dataset.view]){if(b.dataset.view==='basket')b.firstChild.textContent=labels.basket+' ';else b.textContent=labels[b.dataset.view]}
 for(const [id,label]of [['transport','⇄ Перевозки'],['production','⚒ Производство']]){const b=document.createElement('button');b.dataset.view=id;b.textContent=label;document.querySelector('nav').insertBefore(b,document.querySelector('nav [data-view="market"]'))}
 function navigate(id){document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!==id);document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===id));if(id==='transport')renderRoutes();if(id==='production')renderEnchant();localStorage.setItem('ledger.v2.tab',id)}
-for(const b of document.querySelectorAll('nav button'))b.onclick=()=>navigate(b.dataset.view);
+for(const id of ['strategy','transport','production','market','basket','holdings','trip','subscription']){const b=document.querySelector('nav [data-view="'+id+'"]');if(b)document.querySelector('nav').append(b)}
+for(const b of document.querySelectorAll('nav button'))b.onclick=()=>{navigate(b.dataset.view);document.querySelector('.trade-panel').open=false;$(b.dataset.view)?.scrollIntoView({behavior:'smooth',block:'start'})};
 let routePlans=[],lastCraft=null;const recipes=window.LEDGER_RECIPES;
 function recipe(){return recipes.find(r=>r.id===$('craftRecipe').value)}
 function filterRecipes(){const q=$('craftSearch').value.toLowerCase(),old=$('craftRecipe').value;const subset=recipes.filter(r=>(r.id+' '+byId.get(r.id)?.name).toLowerCase().includes(q)).slice(0,200);$('craftRecipe').innerHTML=subset.map(r=>'<option value="'+r.id+'">'+esc(itemLabel(byId.get(r.id)))+'</option>').join('');if(subset.some(r=>r.id===old))$('craftRecipe').value=old;renderRecipe()}
@@ -30,3 +31,4 @@ const oldRender=renderResults;renderResults=function(){oldRender();renderRoutes(
 filterRecipes();if(recipes.some(r=>r.id==='T4_HEAD_CLOTH_SET1')){$('craftRecipe').innerHTML='<option value="T4_HEAD_CLOTH_SET1">'+esc(itemLabel(byId.get('T4_HEAD_CLOTH_SET1')))+'</option>'+$('craftRecipe').innerHTML;$('craftRecipe').value='T4_HEAD_CLOTH_SET1';renderRecipe()}
 renderRoutes();renderEnchant();const stored=localStorage.getItem('ledger.v2.tab');if(['strategy','transport','production','market','basket','holdings','trip','subscription'].includes(stored))navigate(stored);
 return {navigate,renderRoutes,renderEnchant,calculateCraft,showRoute,recipe};})();
+
