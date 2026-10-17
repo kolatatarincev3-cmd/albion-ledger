@@ -1,0 +1,2 @@
+window.ALBION_CATALOG=[];
+
