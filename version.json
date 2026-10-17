@@ -1,18 +1,25 @@
 {
   "name": "Albion Ledger",
-  "version": "1.7.0-beta.1",
-  "tag": "v1.7-beta",
+  "version": "2.0.0",
   "release_date": "2026-10-17",
-  "status": "public-beta-preview",
+  "status": "public",
+  "classic_url": "classic.html",
   "catalog_items": 10439,
-  "catalog_categories": 16,
-  "hosting": "GitHub Pages preview; subscription server pending",
-  "data_storage": "browser-local trading data; account and plan snapshot on server",
+  "craft_recipes": 6963,
+  "hosting": "GitHub Pages",
+  "data_storage": "browser-local",
+  "pro_access": "open-to-all",
   "features": [
-    "accounts",
-    "one-time-license-keys",
-    "manual-funpay-fulfillment",
-    "server-side-pro-plan-storage"
+    "shared-trading-profile",
+    "route-ranking-and-matrix",
+    "equipment-and-weapon-craft-calculator",
+    "manual-return-rate-and-station-fee",
+    "classic-interface-switch"
   ],
-  "sales_open": false
+  "limitations": [
+    "routes-max-20-items-one-unit-per-item",
+    "craft-normal-quality-only",
+    "craft-not-merged-into-trading-basket",
+    "no-background-alerts-or-cloud-sync"
+  ]
 }
