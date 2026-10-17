@@ -1,17 +1,1 @@
-{
-  "name": "Albion Ledger",
-  "version": "1.6.0",
-  "tag": "v1.6",
-  "release_date": "2026-10-17",
-  "catalog_items": 10439,
-  "catalog_categories": 16,
-  "items_with_weight": 10435,
-  "hosting": "GitHub Pages",
-  "data_storage": "browser-local",
-  "features": [
-    "history-coverage",
-    "confirmed-batch-limits",
-    "basket-preflight"
-  ]
-}
-
+{"name":"Albion Ledger","version":"1.7.0-beta.1","tag":"v1.7-beta","release_date":"2026-10-17","status":"development","catalog_items":10439,"catalog_categories":16,"hosting":"Node.js with HTTPS and persistent SQLite","data_storage":"browser-local trading data; account and plan snapshot on server","features":["accounts","one-time-license-keys","manual-funpay-fulfillment","server-side-pro-plan-storage"],"sales_open":false}
