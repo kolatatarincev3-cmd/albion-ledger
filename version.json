@@ -1,17 +1,18 @@
 {
   "name": "Albion Ledger",
-  "version": "1.6.0",
-  "tag": "v1.6",
+  "version": "1.7.0-beta.1",
+  "tag": "v1.7-beta",
   "release_date": "2026-10-17",
+  "status": "public-beta-preview",
   "catalog_items": 10439,
   "catalog_categories": 16,
-  "items_with_weight": 10435,
-  "hosting": "GitHub Pages",
-  "data_storage": "browser-local",
+  "hosting": "GitHub Pages preview; subscription server pending",
+  "data_storage": "browser-local trading data; account and plan snapshot on server",
   "features": [
-    "history-coverage",
-    "confirmed-batch-limits",
-    "basket-preflight"
-  ]
+    "accounts",
+    "one-time-license-keys",
+    "manual-funpay-fulfillment",
+    "server-side-pro-plan-storage"
+  ],
+  "sales_open": false
 }
-
