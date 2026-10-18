@@ -4,3 +4,5 @@ body.forge .forge-nav{position:sticky;top:0;z-index:30}body.forge .view{scroll-m
 
 body.forge .forge-nav button{width:auto;margin:0;white-space:nowrap}body.forge .panel-top span{max-width:none;font-size:12px}body.forge .forge-actions{margin-top:10px}
 
+body.forge .view{scroll-margin-top:var(--forge-nav-offset,220px)}
+
