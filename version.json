@@ -1,11 +1,11 @@
 {
   "name": "Albion Ledger",
-  "version": "2.1.0",
-  "release_date": "2026-10-17",
+  "version": "3.0.0",
+  "release_date": "2026-10-18",
   "status": "public",
-  "classic_url": "classic.html",
+  "classic_url": "v21.html",
   "catalog_items": 10439,
-  "craft_recipes": 6963,
+  "craft_recipes": 7556,
   "hosting": "GitHub Pages",
   "data_storage": "browser-local",
   "pro_access": "open-to-all",
@@ -16,7 +16,15 @@
     "manual-return-rate-and-station-fee",
     "classic-interface-switch",
     "purchase-enchant-craft-chain-comparison",
-    "separate-local-production-plan"
+    "separate-local-production-plan",
+    "ordered-market-workshop-tabs",
+    "crafting-profit-scanner",
+    "refining-recipes",
+    "cross-city-enchanting",
+    "item-icons",
+    "item-catalog-and-price-search",
+    "manual-island-margin-reroll-calculators",
+    "historical-price-trends"
   ],
   "limitations": [
     "routes-max-20-items-one-unit-per-item",
@@ -25,6 +33,11 @@
     "chain-operations-in-one-city",
     "manual-return-and-station-fees",
     "normal-quality-only",
-    "production-plans-kept-separate-from-trading-basket"
-  ]
+    "production-plans-kept-separate-from-trading-basket",
+    "manual-city-return-and-station-fees",
+    "historical-trend-not-a-price-forecast",
+    "reroll-probabilities-user-entered"
+  ],
+  "legacy_url": "classic.html",
+  "refining_recipes": 115
 }
