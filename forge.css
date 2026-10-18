@@ -2,3 +2,5 @@ body.forge{background:#101210;color:#eee9dc}body.forge aside{position:static;wid
 
 body.forge .forge-nav{position:sticky;top:0;z-index:30}body.forge .view{scroll-margin-top:150px}@media(max-width:600px){body.forge .view{scroll-margin-top:240px}}
 
+body.forge .forge-nav button{width:auto;margin:0;white-space:nowrap}body.forge .panel-top span{max-width:none;font-size:12px}body.forge .forge-actions{margin-top:10px}
+
