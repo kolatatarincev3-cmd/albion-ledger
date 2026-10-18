@@ -1,6 +1,6 @@
 {
   "name": "Albion Ledger",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "release_date": "2026-10-18",
   "status": "public",
   "classic_url": "v21.html",
@@ -24,7 +24,11 @@
     "item-icons",
     "item-catalog-and-price-search",
     "manual-island-margin-reroll-calculators",
-    "historical-price-trends"
+    "historical-price-trends",
+    "grouped-navigation",
+    "manual-calculator-drafts",
+    "explicit-rejection-counts",
+    "fixed-black-market-destination"
   ],
   "limitations": [
     "routes-max-20-items-one-unit-per-item",
@@ -39,5 +43,6 @@
     "reroll-probabilities-user-entered"
   ],
   "legacy_url": "classic.html",
-  "refining_recipes": 115
+  "refining_recipes": 115,
+  "release_name": "Торговый штаб"
 }
