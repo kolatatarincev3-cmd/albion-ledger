@@ -1,0 +1,8 @@
+'use strict';
+window.LedgerMarkets=(()=>{
+const stamp=s=>typeof s==='string'&&!s.startsWith('0001')?Date.parse(/[zZ]$|[+-]\d\d:\d\d$/.test(s)?s:s+'Z'):NaN;
+const normalize=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+function price(row,side,{now=Date.now(),fresh=24}={}){const n=row?.[side],raw=row?.[side+'_date'],time=stamp(raw);if(typeof n!=='number'||!Number.isFinite(n)||n<=0||!Number.isFinite(time)||time>now+300000)return null;const age=Math.max(0,(now-time)/3600000);return {price:n,date:raw,age,fresh:age<=fresh}}
+function history(rows,{id,city,quality,now=Date.now(),days=7}){const day=86400000,end=Math.floor(now/day)*day,start=end-days*day,points=new Map();for(const row of rows||[]){if(row.item_id!==id||normalize(row.location)!==normalize(city)||Number(row.quality)!==quality)continue;for(const p of row.data||[]){const t=stamp(p.timestamp);if(Number.isFinite(t)&&t>=start&&t<end&&t%day===0&&typeof p.item_count==='number'&&Number.isInteger(p.item_count)&&p.item_count>=0)points.set(t,p.item_count)}}return {available:points.size>0,days:points.size,count:points.size?[...points.values()].reduce((a,b)=>a+b,0):null,last:points.size?Math.max(...points.keys()):null,start,end}}
+function rows(markets,quotes,series,{id,qualities,now=Date.now(),fresh=24}){const map=new Map(quotes.filter(q=>q.item_id===id).map(q=>[normalize(q.city)+'|'+Number(q.quality),q]));return markets.flatMap(m=>qualities.map(quality=>{const q=map.get(normalize(m.name)+'|'+quality);return {market:m,quality,sell:price(q,'sell_price_min',{now,fresh}),buy:price(q,'buy_price_max',{now,fresh}),history:history(series,{id,city:m.name,quality,now})}}))}
+return {stamp,normalize,price,history,rows};})();
