@@ -1,0 +1,60 @@
+/* Visual layer only: all existing calculators, controls and saved data remain in place. */
+body.forge{--gold:#d4ba82;--text:#e8e9e4;--muted:#abb2a5;--panel:#171d17;--line:#343d32;background:#101510;color:var(--text);font-family:'Segoe UI',Arial,sans-serif}
+body.forge aside{background:#111711;border-bottom:1px solid #30392e;padding-top:15px;padding-bottom:15px}
+body.forge .brand,body.forge .brand span{font-family:'Segoe UI',Arial,sans-serif;font-weight:600;font-size:20px;letter-spacing:2px}
+body.forge .brand small{font-size:10px;letter-spacing:3px;font-weight:400}
+body.forge main>header{font-size:12px;color:#abb4a5;border-color:#30392e}
+body.forge h1,body.forge h2,body.forge h3,body.forge .forge-heading{font-family:'Segoe UI',Arial,sans-serif;font-weight:600;letter-spacing:-.3px;text-shadow:none}
+body.forge h1,body.forge .forge-heading{font-size:28px}
+body.forge h2{font-size:22px}
+body.forge .eyebrow{font-size:10px;letter-spacing:1.5px;color:#b7ac8c}
+body.forge .v2-switch{gap:8px;margin:12px 0}
+body.forge .v2-switch a,body.forge .v2-pill{border-color:#384132;background:#161d15;color:#c4cbbd;font-size:11px;box-shadow:none}
+body.forge .forge-nav{background:#151c15;border:1px solid #333d30;border-radius:8px;padding:8px;gap:5px;margin:14px 0;box-shadow:none}
+body.forge .forge-nav-group{min-width:125px}
+body.forge .forge-nav-group>summary{white-space:nowrap;font-size:13px;line-height:22px;font-weight:500;padding:8px 11px;border:1px solid transparent;border-radius:5px;color:#c7cebf;background:none}
+body.forge .forge-nav-group>summary:hover{background:#212a1e;color:#f0ead9}
+body.forge .forge-nav-group[data-active=true]>summary{background:#303322;border-color:#625b3e;color:#ecdaae}
+body.forge .forge-nav-options{background:#182016;border-color:#48513b;border-radius:7px;box-shadow:0 10px 24px #0006;padding:7px;min-width:255px}
+body.forge .forge-nav button{font-size:13px;font-weight:500;padding:10px 12px;color:#cbd1c2}
+body.forge .forge-nav button[aria-current=page]{background:#323622;border-color:#71633e;color:#f0dcaa}
+body.forge .control-panel,body.forge .forge-form,body.forge .v16-panel,body.forge .chain-panel,body.forge .strategy-card,body.forge .forge-card{background:#171f16;border-color:#364230;border-radius:7px;box-shadow:none}
+body.forge .trade-panel{padding:20px 22px;background:#171e16}
+body.forge .trade-panel>summary h2{font-size:21px;margin:0}
+body.forge .trade-panel>summary::after{font-size:12px;color:#b6bda9}
+body.forge .forge-form{padding:20px;gap:16px}
+body.forge label{font-size:13px;color:#b9c2b0}
+body.forge input,body.forge select,body.forge textarea{background:#11190f;border-color:#44503b;color:#edf0e6;font-size:14px;box-shadow:none;border-radius:5px}
+body.forge input:focus,body.forge select:focus,body.forge textarea:focus{border-color:#b09d67;outline:2px solid #b09d6733}
+body.forge .primary{background:#d1b575;color:#172014;border:1px solid #d1b575;box-shadow:none;border-radius:5px;font-size:14px;font-weight:600}
+body.forge .primary:hover{background:#e1c68b;border-color:#e1c68b}
+body.forge .secondary,body.forge .add{background:#20291c;border:1px solid #536044;color:#e0d2ad;box-shadow:none;border-radius:5px;font-size:13px}
+body.forge .secondary:hover,body.forge .add:hover{background:#2b3524;border-color:#8d8c61}
+body.forge .forge-state,body.forge #status{background:#1d2818;border-color:#4f603f;border-left:3px solid #a9955f;border-radius:6px;box-shadow:none;padding:17px 20px;font-size:14px;line-height:1.65}
+body.forge .notice,body.forge .forge-caption{font-size:13px;line-height:1.75;color:#aebaa4}
+body.forge .stats article,body.forge .forge-metrics article{background:#171f16;border:1px solid #35422e;box-shadow:none;border-radius:7px;padding:20px}
+body.forge .stats article strong,body.forge .forge-metrics strong{font-family:'Segoe UI',Arial,sans-serif;font-size:28px;font-weight:500;letter-spacing:-.8px;color:#dfc78f}
+body.forge .stats article small{font-size:10px;letter-spacing:1px;color:#b2bda8}
+body.forge .table-wrap{border:1px solid #35412e;border-radius:7px;background:#121a11}
+body.forge table th{background:#202a1b;border-color:#39472f;color:#b7c0aa;font-size:11px;letter-spacing:.5px}
+body.forge table td{border-color:#303d28}
+body.forge #rows tr,body.forge #rows tr:hover{background:none}
+body.forge #rows tr:hover td{background:#1b2716}
+body.forge #rows td{font-size:15px;padding:20px 18px}
+body.forge #rows .forge-item{gap:14px}
+body.forge #rows .forge-item>div>strong{font:600 17px/1.5 'Segoe UI',Arial,sans-serif;color:#ececde;text-shadow:none}
+body.forge #rows td small{font-size:13px;line-height:1.7;color:#b8c4ac}
+body.forge #rows .forge-icon{width:50px;height:50px;box-shadow:none;border:1px solid #596343;background:#1c2815;border-radius:5px}
+body.forge #rows .tag{font-size:11px;color:#d9c48f;background:#2b311e;border-color:#59603c;padding:3px 7px;border-radius:4px}
+body.forge #rows .audit-link{background:#232e1c;border-color:#64704b;border-radius:5px;box-shadow:none;margin-top:12px;padding:9px 12px;gap:9px}
+body.forge #rows .audit-link:hover{background:#2c3822;border-color:#a9a16a;box-shadow:none}
+body.forge #rows .audit-button-icon{background:none;border:0;font-size:22px;width:24px;height:30px;color:#cbbb87}
+body.forge #rows .audit-button-title{font-size:14px;color:#ded2ad;font-weight:600}
+body.forge #rows .audit-button-hint{font-size:12px;color:#b9c1ab}
+body.forge #rows .audit-button-arrow{font-size:22px;color:#a7b494}
+body.forge #rows .audit-link.negative{background:#36271c;border-color:#9f7850}
+body.forge .forge-checks span{background:#202b1a;border-color:#435337;color:#cbd5bd;font-size:13px;padding:7px 10px}
+body.forge .forge-checks strong{color:#e0cc99;font-weight:600}
+body.forge #auditDialog,body.forge #forgeModal{background:#182215;border-color:#687548;border-radius:8px;box-shadow:0 20px 60px #0008}
+body.forge main>footer{font-size:12px;color:#9ba98f;border-color:#33412b;margin-top:36px}
+@media(max-width:680px){body.forge .forge-nav-group{min-width:40%}body.forge .trade-panel{padding:17px}body.forge .forge-form{padding:16px}body.forge .forge-heading{font-size:25px}body.forge .stats article strong{font-size:25px}}
