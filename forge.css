@@ -33,3 +33,5 @@ body.forge #rows .audit-link.negative{border-color:#cb895b;background:linear-gra
 body.forge #rows .audit-link.negative .audit-button-icon{border-color:#d59a68;color:#ffd4aa}
 @media(max-width:600px){body.forge #rows td{padding:18px 14px}body.forge #rows .forge-item{min-width:270px;gap:12px}body.forge #rows .forge-item>div>strong{font-size:18px}body.forge #rows .forge-icon{width:52px;height:52px}}
 @media(prefers-reduced-motion:reduce){body.forge #rows .audit-link{transition:none}}
+
+body.forge #auditDialog{font-size:15px;line-height:1.65}body.forge #auditDialog td{font-size:15px;padding:16px 13px}body.forge #auditDialog td small{font-size:13px;line-height:1.6}body.forge #auditDialog th{font-size:12px}.audit-basis{padding:14px 17px;border-left:3px solid #d6b36c;background:#c7a14d14;color:#eadfc7}.audit-basis strong{color:#ffe1a0}
